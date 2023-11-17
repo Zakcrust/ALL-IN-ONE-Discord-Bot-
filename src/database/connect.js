@@ -10,7 +10,7 @@ async function connect() {
     useUnifiedTopology: true,
   }).then(() => {
     console.log(chalk.blue(chalk.bold(`Database`)), (chalk.white(`>>`)), chalk.red(`MongoDB`), chalk.green(`is ready!`))
-  }).catch(() => {
+  }).catch((err) => {
     console.log(chalk.red(`[ERROR]`), chalk.white(`>>`), chalk.red(`MongoDB`), chalk.white(`>>`), chalk.red(`Failed to connect to MongoDB!`), chalk.white(`>>`), chalk.red(`Error: ${err}`))
     console.log(chalk.red("Exiting..."))
     process.exit(1)
