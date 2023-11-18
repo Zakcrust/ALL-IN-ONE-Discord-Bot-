@@ -65,12 +65,12 @@ if (clientID && clientSecret) {
             })
         ],
         nodes: [
-            {
-                host: process.env.LAVALINK_HOST || "lava.link",
-                port: parseInt(process.env.LAVALINK_PORT) || 80,
-                password: process.env.LAVALINK_PASSWORD || "CorwinDev",
-                secure: false
-            },
+            // {
+            //     host: process.env.LAVALINK_HOST || "lava.link",
+            //     port: parseInt(process.env.LAVALINK_PORT) || 80,
+            //     password: process.env.LAVALINK_PASSWORD || "CorwinDev",
+            //     secure: false
+            // },
             {
                 host: "lavalink.techpoint.world",
                 port: 80,
@@ -94,11 +94,17 @@ if (clientID && clientSecret) {
         ],
         nodes: [
             {
-                host: process.env.LAVALINK_HOST || "lava.link",
-                port: parseInt(process.env.LAVALINK_PORT) || 80,
-                password: process.env.LAVALINK_PASSWORD || "CorwinDev",
+                host: "lavalink.techpoint.world",
+                port: 80,
+                password: "techpoint",
                 secure: false
             },
+            // {
+            //     host: process.env.LAVALINK_HOST || "lava.link",
+            //     port: parseInt(process.env.LAVALINK_PORT) || 80,
+            //     password: process.env.LAVALINK_PASSWORD || "CorwinDev",
+            //     secure: false
+            // },
         ],
         send(id, payload) {
             const guild = client.guilds.cache.get(id);
